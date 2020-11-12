@@ -12,7 +12,6 @@ namespace NewBrandingStyle.Web.Controllers
         }
 
         [HttpPost]
-
         public IActionResult Index(CompanyModel company)
         {
             var viewModel = new CompanyAddedViewModel

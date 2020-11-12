@@ -10,13 +10,13 @@ namespace NewBrandingStyle.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CompanyAPIController : ControllerBase
+    public class CompanyNewController : ControllerBase
     { 
         [HttpPost]
         [Route("AddNewItem")]
         public IActionResult AddNewItem(CompanyModel companyModel)
         {
-            return Ok("Item added succesfully!");
+            return Ok();
         }
     }
 }
