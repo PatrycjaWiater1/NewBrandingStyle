@@ -17,23 +17,6 @@ namespace NewBrandingStyle.Web.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpPost]
-        [Route("AddNewItem")]
-        public IActionResult Add(CompanyModel companyModel)
-        {
-            var entity = new ItemEntity
-            {
-                Name = companyModel.Name,
-                Description = companyModel.Description,
-                IsVisible = companyModel.IsVisible,
-            };
-            _dbContext.Add(entity);
-            _dbContext.SaveChanges();
-
-            return Ok();
-        }
-
-
         [HttpGet]
         [Route("GetItems")]
         public async Task<IActionResult> GetItems()
